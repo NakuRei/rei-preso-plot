@@ -1,5 +1,8 @@
 # rei-preso-plot
 
+[![Publish Python distributions to PyPI](https://github.com/NakuRei/rei-preso-plot/actions/workflows/publish-to-test-pypi.yml/badge.svg)](https://github.com/NakuRei/rei-preso-plot/actions/workflows/publish-to-test-pypi.yml)
+![License](https://img.shields.io/github/license/NakuRei/rei-preso-plot)
+
 Python package for drawing graphs for presentation materials with `matplotlib`.
 
 ## Description
