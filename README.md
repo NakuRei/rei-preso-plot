@@ -15,7 +15,7 @@ The created graph can be directly placed on a presentation slide with a nice des
 ## Installation
 
 ```shell
-pip install reipresoplot
+pip install rei-preso-plot
 ```
 
 ## Usage
@@ -26,29 +26,27 @@ Graph functions.
 Can emphasize parts by adding color or embedding legends in line graphs.
 When passing `matplotlib.axes.Axes` to the argument ax, it returns the `matplotlib.axes.Axes`. Therefore, using the functions of `matplotlib`, you can specify the drawing range, etc., after these functions.
 
-| 関数                           | 説明                        |
+| Function                       | Description                 |
 | :----------------------------- | :-------------------------- |
 | `reipresoplot.plot_line_graph` | Line graph drawing function |
 | `reipresoplot.plot_bar_graph`  | Bar graph drawing function  |
 
-#### Plot line graph
+| Code                                      | Graph                          |
+| :---------------------------------------- | :----------------------------- |
+| [for_line_graph.py][line_graph_code_link] | ![Line graph][line_graph_link] |
+| [for_bar_graph.py][bar_graph_code_link]   | ![Bar graph][bar_graph_link]   |
 
-Running [examples/using_graph_functions/for_line_graph.py](examples/using_graph_functions/for_line_graph.py) will produce the following graph.
-
-![plot_line_graph](examples/using_graph_functions/result/plot_line_graph.png)
-
-#### Plot bar graph
-
-Running [examples/using_graph_functions/for_bar_graph.py](examples/using_graph_functions/for_bar_graph.py) will produce the following graph.
-
-![plot_bar_graph](examples/using_graph_functions/result/plot_bar_graph.png)
+[line_graph_link]: https://github.com/NakuRei/rei-preso-plot/raw/main/examples/using_graph_functions/result/plot_line_graph.png
+[line_graph_code_link]: https://github.com/NakuRei/rei-preso-plot/blob/main/examples/using_graph_functions/for_line_graph.py
+[bar_graph_code_link]: https://github.com/NakuRei/rei-preso-plot/blob/main/examples/using_graph_functions/for_bar_graph.py
+[bar_graph_link]: https://github.com/NakuRei/rei-preso-plot/raw/main/examples/using_graph_functions/result/plot_bar_graph.png
 
 ### Using matplotlibrc files
 
 By reading `matplotlibrc` files, you can customize the `matplotlib` style as a whole, i.e. without specifying it with `rcParams`, etc.
 For details, see [Matplotlib documentation](https://matplotlib.org/stable/tutorials/introductory/customizing.html).
 
-| 関数                                         | 説明                                                    |
+| Function                                     | Description                                             |
 | :------------------------------------------- | :------------------------------------------------------ |
 | `reipresoplot.get_line_graph_mpl_style_path` | Get the path to the `matplotlibrc` file for line graphs |
 | `reipresoplot.get_bar_graph_mpl_style_path`  | Get the path to the `matplotlibrc` file for bar graphs  |
@@ -77,19 +75,25 @@ with plt.style.context(mpl_style_path):
 
 #### Line graph changes
 
-Please refer to the code at [examples/using_matplotlibrc_files/for_line_graph.py](examples/using_matplotlibrc_files/for_line_graph.py) for line graph changes.
+Please refer to the code at [examples/using_matplotlibrc_files/for_line_graph.py](https://github.com/NakuRei/rei-preso-plot/blob/main/examples/using_matplotlibrc_files/for_line_graph.py) for line graph changes.
 
-|                                  before                                   |                                  after                                  |
-| :-----------------------------------------------------------------------: | :---------------------------------------------------------------------: |
-| ![before](examples/using_matplotlibrc_files/result/line_graph_before.png) | ![after](examples/using_matplotlibrc_files/result/line_graph_after.png) |
+|           Before            |           After           |
+| :-------------------------: | :-----------------------: |
+| ![Before][before_line_link] | ![After][after_line_link] |
+
+[before_line_link]: https://raw.githubusercontent.com/NakuRei/rei-preso-plot/main/examples/using_matplotlibrc_files/result/line_graph_before.png
+[after_line_link]: https://raw.githubusercontent.com/NakuRei/rei-preso-plot/main/examples/using_matplotlibrc_files/result/line_graph_after.png
 
 #### Bar graph changes
 
-Please refer to the code at [examples/using_matplotlibrc_files/for_bar_graph.py](examples/using_matplotlibrc_files/for_bar_graph.py) for bar graph changes.
+Please refer to the code at [examples/using_matplotlibrc_files/for_bar_graph.py](https://github.com/NakuRei/rei-preso-plot/blob/main/examples/using_matplotlibrc_files/for_bar_graph.py) for bar graph changes.
 
-|                                  before                                  |                                 after                                  |
-| :----------------------------------------------------------------------: | :--------------------------------------------------------------------: |
-| ![before](examples/using_matplotlibrc_files/result/bar_graph_before.png) | ![after](examples/using_matplotlibrc_files/result/bar_graph_after.png) |
+|           Before           |          After           |
+| :------------------------: | :----------------------: |
+| ![Before][before_bar_link] | ![After][after_bar_link] |
+
+[before_bar_link]: https://raw.githubusercontent.com/NakuRei/rei-preso-plot/main/examples/using_matplotlibrc_files/result/bar_graph_before.png
+[after_bar_link]: https://raw.githubusercontent.com/NakuRei/rei-preso-plot/main/examples/using_matplotlibrc_files/result/bar_graph_after.png
 
 ## Test
 
