@@ -1,0 +1,17 @@
+{
+    "files.eol": "\n",
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "black",
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": null,
+        "editor.formatOnSave": true,
+    },
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+}

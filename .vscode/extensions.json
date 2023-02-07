@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "streetsidesoftware.code-spell-checker",
+        "naumovs.color-highlight",
+        "saikou9901.evilinspector",
+        "mhutchie.git-graph",
+        "oderwat.indent-rainbow",
+        "alefragnani.separators",
+        "gruntfuggly.todo-tree",
+        "shardulm94.trailing-spaces",
+        "njpwerner.autodocstring"
+    ]
+}
