@@ -49,19 +49,20 @@ When passing `matplotlib.axes.Axes` to the argument ax, it returns the `matplotl
 By reading `matplotlibrc` files, you can customize the `matplotlib` style as a whole, i.e. without specifying it with `rcParams`, etc.
 For details, see [Matplotlib documentation](https://matplotlib.org/stable/tutorials/introductory/customizing.html).
 
-| Function                                     | Description                                             |
-| :------------------------------------------- | :------------------------------------------------------ |
-| `reipresoplot.get_line_graph_mpl_style_path` | Get the path to the `matplotlibrc` file for line graphs |
-| `reipresoplot.get_bar_graph_mpl_style_path`  | Get the path to the `matplotlibrc` file for bar graphs  |
+| Function                                               | Description                                                |
+| :----------------------------------------------------- | :--------------------------------------------------------- |
+| `reipresoplot.use_line_graph_style_as_global_settings` | Use `matplotlibrc` file for line graphs as global settings |
+| `reipresoplot.use_bar_graph_style_as_global_settings`  | Use `matplotlibrc` file for bar graphs as global settings  |
+| `reipresoplot.get_line_graph_mpl_style_path`           | Get the path to the `matplotlibrc` file for line graphs    |
+| `reipresoplot.get_bar_graph_mpl_style_path`            | Get the path to the `matplotlibrc` file for bar graphs     |
 
-If you want to apply the style globally to the entire graph plot, use `plt.style.use`.
+If you want to apply the style globally to the entire graph plot, use `reipresoplot.use_XXX_graph_style_as_global_settings`.
 
 ```python
 from matplotlib import pyplot as plt
-from reipresoplot import get_line_graph_mpl_style_path
+from reipresoplot import use_line_graph_style_as_global_settings
 
-mpl_style_path: str = get_line_graph_mpl_style_path()
-plt.style.use(mpl_style_path)
+use_line_graph_style_as_global_settings()
 
 plt.plot(x, y)
 plt.show()
@@ -70,6 +71,8 @@ plt.show()
 If you want to use it temporarily, use a context manager.
 
 ```python
+from reipresoplot import get_line_graph_mpl_style_path
+
 mpl_style_path: str = get_line_graph_mpl_style_path()
 with plt.style.context(mpl_style_path):
     plt.plot(x, y)
